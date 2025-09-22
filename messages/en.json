@@ -72,5 +72,9 @@
   "productHeader":{
     "title":"our products",
     "disc":"discover our products"
+  },
+  "blogBanner":{
+    "title":"Blogs"
   }
+
 }

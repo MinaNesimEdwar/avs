@@ -3,7 +3,7 @@ import Header from "./header";
 import { useTranslations } from "next-intl";
 import ProjectCard from "./projectCard";
 import * as motion from "motion/react-client"; //server
-function Projects() {
+function ProjectsSection() {
   const t = useTranslations("projectsHeader");
   const d = useTranslations("projects");
   const imgs=["/project1.jpg","/project2.jpg","/project3.jpg"]
@@ -37,4 +37,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsSection;

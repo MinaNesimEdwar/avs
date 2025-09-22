@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
   Carousel,
   CarouselContent,
@@ -22,18 +22,21 @@ function Brands() {
   ];
   const brands = ["bose", "jbl", "pioneer", "shure", "panasonic", "bose"];
   const t = useTranslations("brandsHeader");
+  const locale =useLocale();
   return (
     <div className=" container space-y-10 ">
       <Carousel
         className="grid grid-cols-1  lg:grid-cols-[30%_70%]  gap-4 space-y-6 "
-        opts={{ loop: true ,align: "start"}}
-        
+        opts={{ loop: true , align: "start",direction: locale === "ar" ? "rtl" : "ltr"}}
+          dir={locale === "ar" ? "rtl" : "ltr"} 
       >
         <div className=" space-y-12">
           <Header title={t("title")} disc={t("disc")} />
-          <div className="flex items-center  gap-2">
-            <CarouselPrevious className={"static translate-0 hover:bg-main transition-all duration-300 border-0 cursor-pointer"} />
-            <CarouselNext className={"static translate-0 hover:bg-main transition-all duration-300 border-0 cursor-pointer"} />
+          <div className={`flex items-center  max-md:justify-center  gap-2 ${
+              locale === "ar" ? "flex-row-reverse justify-end" : ""
+            }`}>
+            <CarouselPrevious className={"static  translate-0 hover:bg-main transition-all duration-300 border-0 cursor-pointer"} />
+            <CarouselNext className={"static  translate-0 hover:bg-main transition-all duration-300 border-0 cursor-pointer"} />
           </div>
         </div>
         <CarouselContent>
@@ -55,6 +58,7 @@ function Brands() {
                       src={imgs[index]}
                       width={100}
                       height={100}
+                      alt={brands[index]}
                     />
                   </div>
                   <p className=" capitalize text-white text-xl font-bold text-center">

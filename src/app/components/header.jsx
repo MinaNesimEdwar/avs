@@ -1,12 +1,12 @@
 import React from "react";
 import * as motion from "motion/react-client"; //server
 
-function Header({ title, disc }) {
+function Header({ title, disc ,align="text-start"}) {
   const [first, ...rest] = disc.split(" ");
   return (
     <div
 
-    className=" space-y-2">
+    className={` space-y-2 max-md:text-center  ${align}`}>
       <motion.p 
              initial={{opacity:0 ,y:-20}}
         whileInView={{opacity:1,y:0}}

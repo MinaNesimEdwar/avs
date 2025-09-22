@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-function BlogCard({ title, disc,img }) {
+function BlogCard({ title, disc,img,id }) {
   return (
     <div>
       <article className="  space-y-4 border border-main rounded-2xl overflow-hidden group">
@@ -14,7 +14,7 @@ function BlogCard({ title, disc,img }) {
           <h3 className="text-white font-bold line-clamp-2 xl:text-2xl text-xl">{title}</h3>
           <p className="text-gray-400 line-clamp-3">{disc}</p>
           <Link
-            href="/"
+            href={`/blogs/${id}`}
             className="text-main flex items-center  gap-2 font-bold capitalize hover:gap-4 hover:text-white transition-all duration-300 "
           >
             learn more <MdKeyboardDoubleArrowRight size={20} />

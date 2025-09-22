@@ -29,50 +29,51 @@ function Navbar() {
 
       {/* navs */}
       <ul
-        className={`lg:flex flex-col lg:flex-row items-center gap-6 text-lg absolute lg:static bg-black lg:bg-transparent w-full lg:w-auto top-16 lg:top-auto left-0 lg:left-auto px-4 lg:px-0 py-6 lg:py-0 transition-all duration-300 ease-in-out max-lg:space-y-6 ${
+        className={`lg:flex flex-col lg:flex-row items-center gap-6 text-lg absolute lg:static max-lg:text-white max-lg:text-center bg-black lg:bg-transparent w-full lg:w-auto top-16 lg:top-auto left-0 lg:left-auto px-4 lg:px-0 py-6 lg:py-0 transition-all duration-300 ease-in-out max-lg:space-y-6 ${
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
         <li>
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="capitalize font-semibold hover:text-main transition-all duration-300"
           >
             About us
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#skills"
+          <Link
+            href="/blogs"
             className="capitalize font-semibold hover:text-main transition-all duration-300"
           >
-            projects
-          </a>
+            Blogs
+          </Link>
         </li>
         <li>
-          <a
-            href="#experinces"
+          <Link
+            href="/projects"
             className="capitalize font-semibold hover:text-main transition-all duration-300"
           >
-            products
-          </a>
+            Projects
+          </Link>
         </li>
         <li>
-          <a
-            href="#projects"
+          <Link
+            href="/products"
             className="capitalize font-semibold hover:text-main transition-all duration-300"
           >
-            blogs
-          </a>
+            Products
+          </Link>
         </li>
         <li>
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="capitalize font-semibold hover:text-main transition-all duration-300"
           >
-            Contact us
-          </a>
+            contact us
+          </Link>
         </li>
+
       </ul>
 
       <div className="flex items-center gap-2">
