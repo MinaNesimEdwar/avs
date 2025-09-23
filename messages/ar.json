@@ -81,5 +81,9 @@
 },
 "blogBanner": {
   "title": "مقالات"
+},
+"contactHeader": {
+  "title": "اتصل بنا",
+  "disc": "تواصل معنا الآن"
 }
 }

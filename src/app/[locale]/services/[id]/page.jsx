@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { blogs } from "@/data/shared";
+import { services } from "@/data/shared";
 import * as motion from "motion/react-client"; //server
 import SideBlog from "@/app/components/sideBlogs";
-
-function SingleBlog({ params }) {
-  const id = params?.id;
-  const blog = blogs?.find((item) => item.id === Number(id));
-   const otherBlogs = blogs?.filter((item) => item.id !== Number(id))
+function SingleService({ params }) {
+      const id = params?.id;
+      const serv = services?.find((item) => item.id === Number(id));
+       const otherServices = services?.filter((item) => item.id !== Number(id))
   return (
     <div className=" container pb-20 pt-24 lg:pt-32  ">
       <div className="container grid grid-cols-12 xl:gap-x-10 gap-y-12 ">
@@ -20,17 +19,17 @@ function SingleBlog({ params }) {
           className="col-span-12 xl:col-span-8 space-y-6"
         >
           <h1 className="lg:text-3xl text-2xl font-bold leading-tight text-main">
-            {blog?.header}
+            {serv?.header}
           </h1>
           <Image
-            src={blog?.image}
-            alt="blog"
+            src={serv?.image}
+            alt="serv"
             width={500}
             height={500}
             className="object-cover w-full h-[45vh] rounded-xl "
           />
           <div className="  text-gray-400 space-y-6">
-            <p>{blog.body}</p>
+            <p>{serv.body}</p>
           </div>
         </motion.div>
         {/* author & related */}
@@ -51,18 +50,18 @@ function SingleBlog({ params }) {
             />
             <div>
               <p className="font-semibold  text-main text-lg">By:</p>
-              <p className="font-bold text-lg text-white">{blog?.author}</p>
-              <p className="text-sm text-gray-400">Created at : {blog?.date}</p>
+              <p className="font-bold text-lg text-white">{serv?.author}</p>
+              <p className="text-sm text-gray-400">Created at : {serv?.date}</p>
             </div>
           </div>
           <div className="space-y-6">
-            <h2 className=" text-2xl font-semibold text-main">Related Blogs</h2>
-           <SideBlog page="blogs" other={otherBlogs} />
+            <h2 className=" text-2xl font-semibold text-main">Related Services</h2>
+           <SideBlog page="services" other={otherServices} />
           </div>
         </motion.div>
       </div>
     </div>
-  );
+  )
 }
 
-export default SingleBlog;
+export default SingleService

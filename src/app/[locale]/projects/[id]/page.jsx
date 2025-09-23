@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import { blogs } from "@/data/shared";
+import { projects } from "@/data/shared";
 import * as motion from "motion/react-client"; //server
 import SideBlog from "@/app/components/sideBlogs";
 
-function SingleBlog({ params }) {
+function SingleProject({ params }) {
   const id = params?.id;
-  const blog = blogs?.find((item) => item.id === Number(id));
-   const otherBlogs = blogs?.filter((item) => item.id !== Number(id))
+  const project = projects?.find((item) => item.id === Number(id));
+   const otherProjects = projects?.filter((item) => item.id !== Number(id))
   return (
     <div className=" container pb-20 pt-24 lg:pt-32  ">
       <div className="container grid grid-cols-12 xl:gap-x-10 gap-y-12 ">
@@ -20,17 +20,17 @@ function SingleBlog({ params }) {
           className="col-span-12 xl:col-span-8 space-y-6"
         >
           <h1 className="lg:text-3xl text-2xl font-bold leading-tight text-main">
-            {blog?.header}
+            {project?.header}
           </h1>
           <Image
-            src={blog?.image}
-            alt="blog"
+            src={project?.image}
+            alt="project"
             width={500}
             height={500}
             className="object-cover w-full h-[45vh] rounded-xl "
           />
           <div className="  text-gray-400 space-y-6">
-            <p>{blog.body}</p>
+            <p>{project.body}</p>
           </div>
         </motion.div>
         {/* author & related */}
@@ -51,13 +51,13 @@ function SingleBlog({ params }) {
             />
             <div>
               <p className="font-semibold  text-main text-lg">By:</p>
-              <p className="font-bold text-lg text-white">{blog?.author}</p>
-              <p className="text-sm text-gray-400">Created at : {blog?.date}</p>
+              <p className="font-bold text-lg text-white">{project?.author}</p>
+              <p className="text-sm text-gray-400">Created at : {project?.date}</p>
             </div>
           </div>
           <div className="space-y-6">
-            <h2 className=" text-2xl font-semibold text-main">Related Blogs</h2>
-           <SideBlog page="blogs" other={otherBlogs} />
+            <h2 className=" text-2xl font-semibold text-main">Related Projects</h2>
+           <SideBlog page={"projects"} other={otherProjects} />
           </div>
         </motion.div>
       </div>
@@ -65,4 +65,4 @@ function SingleBlog({ params }) {
   );
 }
 
-export default SingleBlog;
+export default SingleProject;

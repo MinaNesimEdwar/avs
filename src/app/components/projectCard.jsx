@@ -7,7 +7,7 @@ import {
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
-function ProjectCard({header,disc,img}) {
+function ProjectCard({header,disc,img,id}) {
     const t =useTranslations("projects")
   return (
         <Card className={"py-0 overflow-hidden rounded-3xl bg-light-black border-0 group hover:bg-light-black/50 transition-all duration-300 "}>
@@ -16,7 +16,7 @@ function ProjectCard({header,disc,img}) {
           <CardContent className={"space-y-8 pt-4 pb-8"}>
            <h2 className=" text-3xl font-bold text-main capitalize ">{header}</h2>
            <p className=" text-gray-400 text-sm leading-6 line-clamp-2">{disc}</p>
-           <Link className=" rounded-full px-4 py-2 bg-main hover:bg-main/70  transition-all duration-300 ">{t("btn")}</Link>
+           <Link href={`/projects/${id}`} className=" rounded-full px-4 py-2 bg-main hover:py-3 hover:px-5  text-white transition-all duration-300 ">{t("btn")}</Link>
           </CardContent>
 
         </Card>

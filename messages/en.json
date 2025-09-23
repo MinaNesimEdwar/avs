@@ -75,6 +75,10 @@
   },
   "blogBanner":{
     "title":"Blogs"
+  },
+  "contactHeader":{
+    "title":"contact us",
+    "disc":"get in touch"
   }
 
 }
