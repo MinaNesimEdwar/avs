@@ -152,3 +152,43 @@ export const projects = [
     date: "2025-09-01",
   },
 ];
+
+export const faqs = [
+  {
+    question: "How can I contact your team?",
+    answer: "You can reach us through the contact form on our website or by emailing support@example.com."
+  },
+  {
+    question: "Do you offer custom project support?",
+    answer: "Yes, we help clients turn their ideas into real projects. Just share your idea with us and we’ll guide you step by step."
+  },
+  {
+    question: "Where are you located?",
+    answer: "Our office is located at 35 Sakakini Gamrah, Cairo Governorate. You can also find us on Google Maps."
+  },
+  {
+    question: "What services do you provide?",
+    answer: "We offer web development, mobile applications, and IT consulting tailored to your business needs."
+  },
+  {
+    question: "Can I schedule a free consultation?",
+    answer: "Absolutely! Contact us anytime to book a free consultation and discuss your project goals."
+  }
+]
+
+export const categories = [
+  "Audio Systems",
+  "Video Conferencing",
+  "Smart Home Solutions",
+  "Networking Equipment",
+  "Security & Surveillance"
+];
+
+export const brands = [
+  "Sony",
+  "Samsung",
+  "Bose",
+  "LG",
+  "Panasonic"
+];
+

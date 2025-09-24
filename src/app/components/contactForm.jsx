@@ -75,7 +75,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 col-span-12 md:col-span-6 bg-light-black border border-primary rounded-xl xl:p-12 p-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 col-span-12 md:col-span-6 bg-light-black  rounded-3xl border border-main xl:p-12 p-6">
         <div className="space-y-4">
 
           <h3 className="xl:text-4xl text-2xl font-bold text-main">You Have Question?</h3>

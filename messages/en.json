@@ -78,7 +78,14 @@
   },
   "contactHeader":{
     "title":"contact us",
-    "disc":"get in touch"
-  }
-
+    "disc":"Share your idea with us"
+  },
+  "contactPage":{
+    "title":"contact us",
+    "disc":"get in touch with us"
+  },
+"faq": {
+  "title": "FAQs",
+  "disc": "Find answers to common questions"
+}
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { projects } from "@/data/shared";
 import * as motion from "motion/react-client"; //server
 import SideBlog from "@/app/components/sideBlogs";
+import ContactSection from "@/app/components/contactSection";
 
 function SingleProject({ params }) {
   const id = params?.id;
@@ -41,25 +42,16 @@ function SingleProject({ params }) {
           transition={{ duration: 1 }}
           className="col-span-12 xl:col-span-4 space-y-6"
         >
-          <div className="flex items-center gap-4  border-b-main border-b-2 pb-4">
-            <Image
-              src="/assets/footer.png"
-              alt="author"
-              width={100}
-              height={100}
-              className="object-contain p-2 bg-light-black rounded-md size-24"
-            />
-            <div>
-              <p className="font-semibold  text-main text-lg">By:</p>
-              <p className="font-bold text-lg text-white">{project?.author}</p>
-              <p className="text-sm text-gray-400">Created at : {project?.date}</p>
-            </div>
-          </div>
+
           <div className="space-y-6">
             <h2 className=" text-2xl font-semibold text-main">Related Projects</h2>
            <SideBlog page={"projects"} other={otherProjects} />
           </div>
         </motion.div>
+        <div className=" col-span-12">
+          <ContactSection/>
+        </div>
+
       </div>
     </div>
   );

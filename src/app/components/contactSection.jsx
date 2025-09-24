@@ -26,23 +26,23 @@ function ContactSection() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex gap-4 items-center">
-            <FaPhone className="text-main text-3xl" />
+            <FaPhone className="text-main text-2xl md:text-3xl" />
             <div>
-              <h3 className=" capitalize font-bold text-lg text-main">Phone Number</h3>
+              <h3 className=" capitalize font-bold text-sm md:text-lg text-main">Phone Number</h3>
               <p className="text-gray-400 font-light">+1 (123) 456-7890</p>
             </div>
           </div>
           <div className="flex gap-4 items-center">
-            <TbWorld className="text-main text-3xl" />
+            <TbWorld className="text-main text-2xl md:text-3xl" />
             <div>
-              <h3 className=" capitalize font-bold text-lg text-main">website</h3>
+              <h3 className=" capitalize font-bold text-sm md:text-lg text-main">website</h3>
               <p className="text-gray-400 font-light">AVS.org.com</p>
             </div>
           </div>
           <div className="flex gap-4 items-center">
-            <MdEmail className="text-main text-3xl" />
+            <MdEmail className="text-main text-2xl md:text-3xl" />
             <div>
-              <h3 className=" capitalize font-bold text-lg text-main">Email Address</h3>
+              <h3 className=" capitalize font-bold text-sm md:text-lg text-main">Email Address</h3>
               <p className="text-gray-400 font-light">avs@gmail.com</p>
             </div>
           </div>
