@@ -192,3 +192,41 @@ export const brands = [
   "Panasonic"
 ];
 
+export const products = [
+  {
+    id: 1,
+    image: "/product1.jpg",
+    title: "Audio Mixer",
+    description:
+      "Professional sound mixer with multiple channels. \nDelivers clear audio control for any event.",
+  },
+  {
+    id: 2,
+    image: "/product2.png",
+    title: "Wireless Microphone",
+    description:
+      "Crystal-clear voice transmission with no cables. \nPerfect for conferences, stages, and events.",
+  },
+  {
+    id: 3,
+    image: "/product3.jpg",
+    title: "Powered Speaker",
+    description:
+      "High-performance speaker with deep bass. \nIdeal for halls, concerts, and large venues.",
+  },
+  {
+    id: 4,
+    image: "/product4.jpg",
+    title: "CCTV Camera",
+    description:
+      "Advanced security camera with night vision. \nKeeps your premises safe 24/7.",
+  },
+  {
+    id: 5,
+    image: "/product5.jpg",
+    title: "HD Projector",
+    description:
+      "Bright and sharp visuals with full HD resolution. \nPerfect for meetings, classrooms, and cinemas.",
+  },
+];
+

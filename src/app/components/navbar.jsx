@@ -77,7 +77,7 @@ function Navbar() {
       </ul>
 
       <div className="flex items-center gap-2">
-        <Link href={"/"} className="text-white bg-main font-semibold border-2 border-transparent hover:border-main hover:bg-transparent hover:text-main transition-all duration-300 lg:size-12 size-10 rounded-md lg:rounded-full flex items-center justify-center ">
+        <Link href={"/cart"} className="text-white bg-main font-semibold border-2 border-transparent hover:border-main hover:bg-transparent hover:text-main transition-all duration-300 lg:size-12 size-10 rounded-md lg:rounded-full flex items-center justify-center ">
         <BsCart3 className=" text-lg" /></Link>
         <Link
           href={pathname}

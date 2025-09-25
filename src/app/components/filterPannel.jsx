@@ -5,9 +5,16 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { categories } from "@/data/shared";
 import { brands } from "@/data/shared";
+import * as motion from "motion/react-client"; //server
+
 function FilterPannel() {
   return (
-    <div className=" bg-light-black rounded-2xl p-4 space-y-6">
+    <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+    className=" bg-light-black rounded-2xl p-4 space-y-6">
       <div className="flex items-center justify-between">
         <p className=" text-main font-bold">Filter</p>
         <Button className=" cursor-pointer text-main flex items-center gap-2 border-none hover:gap-3 transition-all duration-300 bg-transparent hover:bg-transparent">
@@ -43,7 +50,7 @@ function FilterPannel() {
         </div>
 
       </div>
-    </div>
+    </motion.div>
   );
 }
 
