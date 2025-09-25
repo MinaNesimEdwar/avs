@@ -8,7 +8,7 @@ function Cart() {
 
      <div className='space-y-4'>
                 <h3 className=' text-main font-bold text-2xl'>Shop Cart</h3>
-        <p className=' text-gray-400'>Total Cart Price: <span className=' font-bold'>987654</span></p>
+        <p className=' text-gray-400'>Total Cart Price: <span className=' font-bold'>9876545</span></p>
      </div>
      <CartItem/>
      <CartItem/>
